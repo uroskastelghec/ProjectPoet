@@ -1,0 +1,29 @@
+{
+    "name": "Function C# Codespace",
+    "image": "mcr.microsoft.com/vscode/devcontainers/dotnet",
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+  
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+      "ms-dotnettools.csharp",
+      "MS-vsliveshare.vsliveshare",
+      "ms-azuretools.vscode-azurefunctions"
+    ],
+   
+    "postCreateCommand": "dotnet restore",
+  
+    "customizations": {
+        "codespaces": {
+            "repositories": {
+                "uroskastelghec/ntkdemoghas": {
+                    "permission": {
+                        "issues": "write"
+                    }
+                }
+            }
+        }
+    }
+  }
